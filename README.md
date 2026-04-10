@@ -1,116 +1,68 @@
-📱 CRidr - Full Stack Mobile App
+# 📱 CRidr - Full Stack Mobile App
 
-CRidr is a full-stack mobile application built using Flutter (frontend) and Node.js (backend).
-The project follows Clean Architecture principles on the Flutter side and uses Cubit (Bloc state management) for scalable and maintainable state handling.
+CRidr is a full-stack mobile application built using **Flutter (frontend)** and **Node.js (backend)**.  
+The project follows **Clean Architecture principles** on the Flutter side and uses **Cubit (Bloc state management)** for scalable and maintainable state handling.
 
-🚀 Tech Stack
-📱 Frontend (Flutter)
-Flutter
-Dart
-Cubit (Bloc State Management)
-Clean Architecture
-Dio (API handling)
-Shared Preferences (local storage)
-🖥 Backend
-Node.js
-Express.js
-Prisma ORM
-Socket.IO (real-time communication)
-JWT Authentication
-RESTful APIs
-🗄 Database
-PostgreSQL / MySQL (via Prisma)
-🏗 Architecture Overview
+---
 
-The project is structured using Clean Architecture, separating the app into layers:
+## 🚀 Tech Stack
 
-📱 Flutter App Layers
-Presentation Layer
-UI Screens
-Cubit (state management)
-Domain Layer
-Entities
-Use Cases
-Data Layer
-Repositories
-Data Sources (API / Local)
-⚙️ Backend Structure
+### 📱 Frontend (Flutter)
+- Flutter
+- Dart
+- Cubit (Bloc State Management)
+- Clean Architecture
+- Dio (API handling)
+- Shared Preferences
 
-The backend is structured into:
+### 🖥 Backend
+- Node.js
+- Express.js
+- Prisma ORM
+- Socket.IO
+- JWT Authentication
+- RESTful APIs
 
-Routes
-Auth routes
-User routes
-Request/Relation routes
-Controllers
-Middleware
-Authentication (JWT)
-Socket Layer
-Real-time updates using Socket.IO
-Database Layer
-Prisma ORM
-🔐 Authentication
+### 🗄 Database
+- PostgreSQL / MySQL (via Prisma)
 
-The app uses JWT authentication:
+---
 
-Register user
-Login user
-Protected routes using middleware
-Token-based access system
-🔄 Features
-User authentication (register/login)
-Profile management
-Friend/request system (if applicable)
-Real-time communication (Socket.IO)
-Clean scalable Flutter architecture
-Centralized state management using Cubit
-📦 Installation
-Backend Setup
-cd backend
-npm install
-npx prisma generate
-npx prisma migrate dev
-npm run dev
-Flutter Setup
-cd flutter_app
-flutter pub get
-flutter run
-🌐 Environment Variables
+## 🏗 Architecture
 
-Create a .env file in backend:
+The Flutter app follows **Clean Architecture**:
 
-PORT=3000
-DATABASE_URL=your_database_url
-JWT_SECRET=your_secret_key
-📁 Project Structure
-CRidr-full
-│
-├── backend/
-│   ├── routers/
-│   ├── middleware/
-│   ├── socket/
-│   ├── prisma/
-│   └── server.ts
-│
-├── flutter_app/
-│   ├── lib/
-│   │   ├── core/
-│   │   ├── features/
-│   │   ├── data/
-│   │   ├── domain/
-│   │   └── presentation/
-│
-└── README.md
-🧠 Key Concepts Used
-Clean Architecture
-Separation of concerns
-State management (Cubit)
-REST API integration
-Real-time communication (Socket.IO)
-Scalable backend design
-📌 Future Improvements
-Push notifications
-Better UI/UX improvements
-Pagination support
-Role-based authentication
-Deployment (Docker / VPS)
+- **Presentation Layer** → UI + Cubit
+- **Domain Layer** → Entities + Use Cases
+- **Data Layer** → Repositories + API/Data Sources
+
+---
+
+## ⚙️ Backend Structure
+
+- Routes (Auth / User / Requests)
+- Middleware (JWT Authentication)
+- Socket.IO (Real-time communication)
+- Prisma ORM (Database management)
+
+---
+
+## 🔐 Authentication
+
+- JWT-based authentication
+- Register & Login system
+- Protected routes using middleware
+- Token-based user sessions
+
+---
+
+## 🔄 Features
+
+- User authentication (Register / Login)
+- Profile management
+- Request system (friends/relations depending on app logic)
+- Real-time updates using Socket.IO
+- Clean scalable Flutter architecture
+- State management using Cubit
+
+---
