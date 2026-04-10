@@ -1,0 +1,101 @@
+###
+GET  http://localhost:5000
+
+###
+GET http://localhost:5000/user/2
+
+###
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "name":"zeyad",
+    "email":"zeyadalaa1225@gmail.com",
+    "password":"Abcdef12#",
+    "phoneNumber":"01279310432",
+    "type":false
+}
+
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email":"zeyadalaa1225@gmail.com",
+    "password":"Abcdefg12#"
+}
+
+###
+PUt http://localhost:5000/auth/reset-password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzU3ODY1NTk5LCJleHAiOjE3NTc5NTE5OTl9.cN7VnpHztZckDZKzsP7CBVC1YgPO9iWp5V-paHMflzA
+
+{
+    "oldpassword":"1234",
+    "newpassword":"Abcdefg12#"
+}
+
+###
+POST http://localhost:5000/auth/forget-password
+Content-Type: application/json
+
+{
+    "email":"zeyadalaa1225@gmail.com"
+}
+
+###
+POST http://localhost:5000/auth/verify-otp
+Content-Type: application/json
+
+{
+    "email":"zeyadalaa1225@gmail.com",
+    "otp":550369
+}
+
+###
+POST http://localhost:5000/auth/reset-password
+Content-Type: application/json
+
+{
+    "resetToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ6ZXlhZGFsYWExMjI1QGdtYWlsLmNvbSIsImlhdCI6MTc1NzU4NTM3MiwiZXhwIjoxNzU3NTg1OTcyfQ.hmuVT_ICmnnBuIrbqUiX1I1ATwilQHNAbAj5Z6Snn_M",
+    "newPassword":"12345"
+}
+
+###
+POST http://localhost:5000/req/request
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDEsImlhdCI6MTc1ODIzMzc0MCwiZXhwIjoxNzU4MzIwMTQwfQ.9Zmq4mg75zIQ5mzET5rJcodBvYC5V1kokg14psCRuJk
+
+{
+  "issueType": "anything",
+  "carYear": 2020,
+  "carMake": "Toyota",
+  "carModel": "Corolla",
+  "carColor": "White",
+  "latitude": 30.123,
+  "longitude": 31.456,
+  "notes": "ay habd"
+}
+
+
+###
+GET http://localhost:5000/req/PendingRequests
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDEsImlhdCI6MTc1ODIyNjg0NiwiZXhwIjoxNzU4MzEzMjQ2fQ.HDAacdYw__uQzoojd0ub0y4zXTt5ydQk_yIWYUEco28
+
+###
+PUT http://localhost:5000/user/change-location
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDEsImlhdCI6MTc1ODIyOTE5OCwiZXhwIjoxNzU4MzE1NTk4fQ._dg7CAuK0iCc6MSgiwOisStEiyOkLB0yNMJf3vGwmXQ
+
+{
+    "latitude":30.90900,
+    "longitude":29.93939
+}
+
+###
+GET http://localhost:5000/localhost:5000/req/PendingRequests
+
+###
+
+GET http://localhost:5000/user/provider-location/32
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDEsImlhdCI6MTc1ODcyNjk0MCwiZXhwIjoxNzU4ODEzMzQwfQ.5KGe9GdNxFiCX-NRuHDETDXQzQvKQub8MNX4CdfSXp0
